@@ -1,3 +1,3 @@
 # learnMapKit
 
-- add annotation
+- add annotation to mapView

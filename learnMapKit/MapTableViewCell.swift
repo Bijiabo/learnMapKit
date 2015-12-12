@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  MapTableViewCell.swift
 //  learnMapKit
 //
-//  Created by huchunbo on 15/12/5.
+//  Created by huchunbo on 15/12/12.
 //  Copyright © 2015年 Bijiabo. All rights reserved.
 //
 
@@ -10,16 +10,17 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, FMKMapViewControllerProtocol {
-    
+class MapTableViewCell: UITableViewCell, FMKMapViewControllerProtocol {
+
     @IBOutlet weak var mapView: MKMapView!
+    
+    var regionRadius: CLLocationDistance = 1000
     let locationManager = CLLocationManager()
     var artworks = [Artwork]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        title = "Full Screen"
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
@@ -32,17 +33,22 @@ class ViewController: UIViewController, FMKMapViewControllerProtocol {
         loadInitialData()
         mapView.addAnnotations(artworks)
     }
-    
-    var regionRadius: CLLocationDistance = 1000 // 1000 meters (1 kilometer)
+
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
 }
 
-extension ViewController: CLLocationManagerDelegate {
+extension MapTableViewCell: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         print(status)
     }
 }
 
-extension ViewController: FMKMapViewDelegateProtocol {
+extension MapTableViewCell: FMKMapViewDelegateProtocol {
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         return FMapView(mapView, viewForAnnotation: annotation)
     }

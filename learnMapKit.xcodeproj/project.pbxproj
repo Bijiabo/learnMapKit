@@ -15,6 +15,12 @@
 		6525423F1C132FFC00F80AA1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6525423E1C132FFC00F80AA1 /* MapKit.framework */; };
 		65997B871C1B0E1E0011AC2B /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65997B861C1B0E1E0011AC2B /* JSON.swift */; };
 		65997B891C1B0E9B0011AC2B /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = 65997B881C1B0E9B0011AC2B /* PublicArt.json */; };
+		65997B8B1C1C06700011AC2B /* MapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65997B8A1C1C06700011AC2B /* MapTableViewController.swift */; };
+		65997B8F1C1C06D40011AC2B /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65997B8E1C1C06D40011AC2B /* MapTableViewCell.swift */; };
+		65997B911C1C06EF0011AC2B /* NormalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65997B901C1C06EF0011AC2B /* NormalTableViewCell.swift */; };
+		65997B941C1C08250011AC2B /* FMKMapViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65997B931C1C08250011AC2B /* FMKMapViewDelegateProtocol.swift */; };
+		65997B961C1C09770011AC2B /* FMKMapViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65997B951C1C09770011AC2B /* FMKMapViewControllerProtocol.swift */; };
+		65997B991C1C17180011AC2B /* MapHeaderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65997B981C1C17180011AC2B /* MapHeaderTableViewController.swift */; };
 		F93799C4FED18861A2ACA6BC /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F937936665AA486018856A84 /* ArtWork.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +35,12 @@
 		6525423E1C132FFC00F80AA1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		65997B861C1B0E1E0011AC2B /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		65997B881C1B0E9B0011AC2B /* PublicArt.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = PublicArt.json; path = learnMapKit/PublicArt.json; sourceTree = "<group>"; };
+		65997B8A1C1C06700011AC2B /* MapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewController.swift; sourceTree = "<group>"; };
+		65997B8E1C1C06D40011AC2B /* MapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
+		65997B901C1C06EF0011AC2B /* NormalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalTableViewCell.swift; sourceTree = "<group>"; };
+		65997B931C1C08250011AC2B /* FMKMapViewDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMKMapViewDelegateProtocol.swift; sourceTree = "<group>"; };
+		65997B951C1C09770011AC2B /* FMKMapViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMKMapViewControllerProtocol.swift; sourceTree = "<group>"; };
+		65997B981C1C17180011AC2B /* MapHeaderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapHeaderTableViewController.swift; sourceTree = "<group>"; };
 		F937936665AA486018856A84 /* ArtWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,8 +77,10 @@
 		6525422B1C132FD000F80AA1 /* learnMapKit */ = {
 			isa = PBXGroup;
 			children = (
+				65997B921C1C07DA0011AC2B /* Protocols */,
+				65997B8D1C1C06BD0011AC2B /* Views */,
+				65997B8C1C1C06740011AC2B /* Controllers */,
 				6525422C1C132FD000F80AA1 /* AppDelegate.swift */,
-				6525422E1C132FD000F80AA1 /* ViewController.swift */,
 				652542301C132FD000F80AA1 /* Main.storyboard */,
 				652542331C132FD000F80AA1 /* Assets.xcassets */,
 				652542351C132FD000F80AA1 /* LaunchScreen.storyboard */,
@@ -75,6 +89,34 @@
 				65997B861C1B0E1E0011AC2B /* JSON.swift */,
 			);
 			path = learnMapKit;
+			sourceTree = "<group>";
+		};
+		65997B8C1C1C06740011AC2B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				65997B8A1C1C06700011AC2B /* MapTableViewController.swift */,
+				6525422E1C132FD000F80AA1 /* ViewController.swift */,
+				65997B981C1C17180011AC2B /* MapHeaderTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		65997B8D1C1C06BD0011AC2B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				65997B8E1C1C06D40011AC2B /* MapTableViewCell.swift */,
+				65997B901C1C06EF0011AC2B /* NormalTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		65997B921C1C07DA0011AC2B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				65997B931C1C08250011AC2B /* FMKMapViewDelegateProtocol.swift */,
+				65997B951C1C09770011AC2B /* FMKMapViewControllerProtocol.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,8 +198,14 @@
 			files = (
 				6525422F1C132FD000F80AA1 /* ViewController.swift in Sources */,
 				6525422D1C132FD000F80AA1 /* AppDelegate.swift in Sources */,
+				65997B8F1C1C06D40011AC2B /* MapTableViewCell.swift in Sources */,
+				65997B911C1C06EF0011AC2B /* NormalTableViewCell.swift in Sources */,
+				65997B961C1C09770011AC2B /* FMKMapViewControllerProtocol.swift in Sources */,
 				F93799C4FED18861A2ACA6BC /* ArtWork.swift in Sources */,
+				65997B8B1C1C06700011AC2B /* MapTableViewController.swift in Sources */,
+				65997B991C1C17180011AC2B /* MapHeaderTableViewController.swift in Sources */,
 				65997B871C1B0E1E0011AC2B /* JSON.swift in Sources */,
+				65997B941C1C08250011AC2B /* FMKMapViewDelegateProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
